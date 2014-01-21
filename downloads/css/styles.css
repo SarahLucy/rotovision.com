@@ -1,0 +1,86 @@
+/* CSS Resets */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+
+/* GLOBAL LAYOUT STYLES
+------------------------------------------------------------------------------*/
+
+.left { float: left; }
+.right { float: right; }
+.noFloat { float: none; }
+.clear { clear: both; }
+.inactive { color: #999999; }
+.inline { display: inline !important; width: auto !important; }
+.autowidth { width: auto; }
+.hidden { display: none; }
+.opacity50 {
+	filter: alpha(opacity:50);
+	KHTMLOpacity: 0.50;
+	MozOpacity: 0.50;
+	opacity: 0.50;
+}
+.centred { margin-left: auto; margin-right: auto; }
+
+/* TEMPLATE
+-----------------------------------------------------------------------------------*/
+html,body { height: 100% }
+body {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	background: #EDEDED;
+}
+h1,h2,h3,h4,h5,h6 {
+}
+h1 {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 12px;
+	font-weight: normal;
+	color: black;
+}
+p {
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 18px;
+}
+li {
+	font-size: 12px;
+	line-height: 18px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#container {
+	width: 800px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+	padding: 25px;
+	border: 1px solid #999;
+	background: white;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+	padding-top: 50px;
+}
+img.grab {
+	display: block;
+	margin: 0 auto;
+}
+a.download {
+	width: 120px;
+	height: 20px;
+	display: block;
+	overflow: hidden;
+	text-indent: -2000px;
+	background: #FFF url(../images/download.png) 0 0 no-repeat;
+	background-size: 120px 20px;
+}
+
+@media all and (max-device-width: 1023px) {
+
+	a.download {
+		background-image: url(../images/download@2x.png);
+	}
+
+}

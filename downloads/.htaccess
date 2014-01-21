@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+Options +Indexes
+RewriteEngine On
+RewriteBase /downloads/
+
+#Rewrites...
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d 
+RewriteRule .* - [L]
+
+#Pages
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?book=$1 [L,QSA]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ index.php?book=$1&page=$2 [L,QSA]
+
+</IfModule>

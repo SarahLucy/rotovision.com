@@ -1,0 +1,1776 @@
+/*
+Theme Name: Rotovision
+Author: Traffic Web Development
+Version: 1.0
+*/
+
+/* !COLOUR REFERENCE  */
+
+/*
+Pantone 29-9	#EEEBE1		Background colour
+Pantone 142-6	#DC90A9		Pink
+Pantone 114-3	#E27381		Darker pink
+Pantone 97-2	#DD4353		Magenta
+Pantone 80-1	#B9292F		Red
+Pantone 324-5	#6C2225		Maroon
+*/
+
+/* !FONT REFERENCE  */
+
+/*
+font-family:'Century Gothic W01';
+*/
+
+/* !CSS RESETS */
+/*-----------------------------------------------------------------------------------*/
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+
+/* !GLOBAL LAYOUT STYLES */
+/*-----------------------------------------------------------------------------------*/
+
+.left { float: left; }
+.right { float: right; }
+.noFloat { float: none; }
+.clear { clear: both; }
+.inactive { color: #999999; }
+.inline { display: inline !important; width: auto !important; }
+.autowidth { width: auto; }
+.hidden { display: none; }
+.opacity50 {
+	filter: alpha(opacity:50);
+	KHTMLOpacity: 0.50;
+	MozOpacity: 0.50;
+	opacity: 0.50;
+}
+.centred { margin-left: auto; margin-right: auto; }
+.rotate90 {
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-moz-transform:rotate(-90deg); /* Firefox */
+	-webkit-transform:rotate(-90deg); /* Safari and Chrome */
+	-o-transform:rotate(-90deg); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	position: absolute;
+	display: block;
+}
+
+/* !WORDPRESS CLASSES
+------------------------------------------------ */
+img.alignright {float:right; margin:0 0 10px 10px}
+img.alignleft {float:left; margin:0 10px 10px 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 10px 10px}
+a img.alignleft {float:left; margin:0 10px 10px 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* !TEMPLATE  */
+/*-----------------------------------------------------------------------------------*/
+body {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	background: #EEEBE1;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #6C2225;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 17px;
+	line-height: 18px;
+	margin-bottom: 18px;
+}
+h2 {
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 6px;
+}
+h3 {
+	color: #DD4353;
+	font-size: 11px;
+	line-height: 16px;
+	margin-bottom: 0;
+}
+p {
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 16px;
+	color: #6C2225;
+}
+ul {
+	margin-bottom: 14px;
+	list-style: outside none;
+}
+li {
+	font-size: 12px;
+	line-height: 14px;
+	color: #6C2225;
+	padding-left: 14px;
+	background: url(images/bullet.png) 0 4px no-repeat;
+}
+#container {
+	width: 836px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+	color: #DD4353;
+}
+a:hover {
+	text-decoration: underline;
+	color: #B9292F;
+}
+hr {
+	background: none;
+	border: none;
+	border-bottom: 2px solid #DCB4B3;
+	clear: both;
+	margin: 6px 0;
+}
+a.top_link {
+	float: right;
+	clear: both;
+	font-size: 12px;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+/* !HEADER  */
+/*-----------------------------------------------------------------------------------*/
+
+#header {
+	overflow: hidden;
+	background: transparent url(images/content_bg_top.png) 0 100% no-repeat;
+	padding-top: 28px;
+}
+#site_logo {
+	margin: 36px 0 0 36px;
+	width: 418px;
+	height: 79px;
+	float: left;
+}
+#site_logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: transparent url(images/rotovision_books.png) 0 0 no-repeat;
+}
+.blog #site_logo a {
+	background-image: url(images/rotovision_blog.png);
+}
+
+
+/* !NAV  */
+/*-----------------------------------------------------------------------------------*/
+.nav {
+	list-style: none;
+}
+.nav li {
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+.mainNavHolder {
+	width: 307px;
+	height: 178px;
+	overflow: hidden;
+	float: right;
+	position: relative;
+    top: 1px;
+}
+ul.mainNav li {
+	float: left;
+	height: 178px;
+}
+ul.mainNav li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: 0 0 no-repeat;
+}
+ul.mainNav li.menu-item-books a { background-image: url(images/mainnav_books.png); width: 44px;}
+ul.mainNav li.menu-item-rights a { background-image: url(images/mainnav_rights.png); width: 40px; }
+ul.mainNav li.menu-item-catalogue a { background-image: url(images/mainnav_catalogue.png); width: 47px; }
+ul.mainNav li.menu-item-about-us a { background-image: url(images/mainnav_about.png); width: 35px; }
+ul.mainNav li.menu-item-contact-us a { background-image: url(images/mainnav_contact.png); width: 42px; }
+ul.mainNav li.menu-item-blog a { background-image: url(images/mainnav_blog.png); width: 35px; }
+
+ul.mainNav li a:hover { background-position: 0 -178px; }
+
+ul.mainNav li.current-menu-item a,
+ul.mainNav li.current_page_parent a,
+ul.mainNav li.current_page_item a/*
+,
+.tax-roto_book_cat .menu-item-books a,
+.single-roto_book .menu-item-books a
+*/ { 
+	background-position: 0 -356px;
+}
+
+
+/* !CONTENT  */
+/*-----------------------------------------------------------------------------------*/
+#content {
+	background: transparent url(images/content_bg_tile.png) 0 0 repeat-y;
+	padding: 20px 0 20px 65px;
+	overflow: hidden;
+}
+.page #content,
+.tax-roto_book_cat #content,
+.single-roto_book #content {
+	padding: 20px 65px;
+}
+#breadcrumbs {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #E27381;
+	font-size: 10px;
+}
+#breadcrumbs a {
+	color: #E27381;
+}
+#anchors {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #B9292F;
+	font-size: 10px;
+	line-height: 18px;
+	background: url(images/arrow-down.png) 0 -36px no-repeat;
+	padding-left: 20px;
+}
+#anchors a {
+	color: #B9292F;
+}
+
+#mainContent {
+	overflow: hidden;
+}
+#mainContent.has_sidebar {
+	width: 488px;
+	float: left;
+}
+.ribbon {
+	position: absolute;
+	width: 213px;
+	height: 72px;
+	text-indent: -2000px;
+	overflow: hidden;
+	display: block;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-top: -30px;
+}
+.ribbon.leftside {
+	left: 7px;
+}
+.ribbon.bloglink {
+	background-image: url(images/ribbon_blog.png);
+}
+
+h2.sectionHeader {
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 16px;
+    padding-bottom: 8px;
+	text-align: center;
+	color: #E27381;
+	border-bottom: 2px solid #E27381;
+}
+h2.sectionHeader span{
+	background: #FFF;
+	padding: 0 10px;
+	position: relative;
+	top: 17px;
+}
+
+
+.columns {
+	width: 110%;
+}
+.column {
+	float: left;
+	margin-right: 17px;
+}
+.column.last {
+	margin-right: 0;
+}
+.column.colx2 {
+	width: 164px;
+}
+.column.colx4 {
+	width: 345px;
+}
+
+.columns.rightsNav {
+	margin-top: 75px;
+	list-style: none;
+}
+.columns.rightsNav li {
+	padding: 0;
+	background: none;
+}
+.columns.rightsNav img.arrow-down {
+	display: block;
+	margin: 0 0 14px 18px;
+}
+
+/* !LOADING  */
+/*-----------------------------------------------------------------------------------*/
+object {
+	background: url(images/ajax-loader.gif) 50% 40% no-repeat;
+}
+
+/* !PAGE  */
+/*-----------------------------------------------------------------------------------*/
+.page h1 {
+	color: #E27381;
+}
+
+.page .post_content {
+	background: #EEEBE1;
+	width: 311px;
+	height: 183px;
+	padding: 20px 20px 0;
+	float: left;
+} 
+.page .post_content h1 {
+	color: #6C2225;
+}
+.page .slideshow {
+	background: #EEEBE1;
+	width: 355px;
+	height: 203px;
+	float: right;
+} 
+.page .slideshow .slide {
+	overflow: hidden;
+	position: relative;
+	width: 355px;
+	height: 203px;
+	overflow: hidden;
+}
+.page .slideshow.large, 
+.page .slideshow.large .slide {
+	height: 385px;
+}
+.page .slideshow .slide img {
+	display: block;
+}
+.page .slideshow .slide .caption p {
+	color: #EEEBE1;
+    font-size: 8px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding-left: 5px;
+}
+.page_content {
+	overflow: hidden;
+}
+.page_content .half_width {
+	width: 330px;
+	float: left;
+}
+
+/* !HOMEPAGE  */
+/*-----------------------------------------------------------------------------------*/
+.page-template-homepage-php .post_content {
+	background: #EEEBE1;
+	width: 313px;
+	height: 184px;
+	padding: 20px 20px 0;
+	float: left;
+} 
+.page-template-homepage-php .slideshow {
+	background: #EEEBE1;
+	width: 353px;
+	height: 204px;
+	float: right;
+} 
+.page-template-homepage-php .slideshow .slide {
+	overflow: hidden;
+	position: relative;
+	width: 353px;
+	height: 204px;
+	overflow: hidden;
+}
+.page-template-homepage-php .slideshow .slide img {
+	float: left;
+}
+.page-template-homepage-php .slideshow .slide .caption {
+	background: none repeat scroll 0 0 #B9292F;
+    float: left;
+    height: 18px;
+    right: -93px;
+    top: 93px;
+    width: 204px;
+}
+.page-template-homepage-php .slideshow .slide .caption p {
+	color: #EEEBE1;
+    font-size: 8px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding-left: 5px;
+}
+.home #secContent {
+	padding-top: 4px;
+}
+
+/* !CONTACT PAGE  */
+/*-----------------------------------------------------------------------------------*/
+h2.title {
+	font-size: 17px;
+	line-height: 18px;
+	margin-bottom: 18px;	
+	color: #E27381;
+}
+#contacts .page_content {
+	background: #EEEBE1;
+	padding: 16px 22px;
+	margin-bottom: 17px;
+}
+#contacts .contact_cat ul {
+	margin: 0;
+}
+#contacts .contact_cat li {
+	background: none;
+	padding: 0;	
+	line-height: 18px;
+}
+
+/* !NEWSLETTER SIGNUP PAGE (EMMA FORM) */
+/*-----------------------------------------------------------------------------------*/
+
+#e2ma_signup_form {
+	margin-top: 36px;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #6C2225;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;	
+}
+
+.e2ma_signup_form form {
+	background: none;
+	padding: 0;
+}
+
+/* Controls the style, width, and font style of the text input, select and textarea fields */
+.e2ma_signup_form input[type=text],
+.e2ma_signup_form textarea,
+.e2ma_signup_form select { 
+ 	border: none;
+    padding: 3px;
+    width: 225px;
+}
+
+/* Controls width, style, and padding of the table border outlines around individual member fields */
+.e2ma_signup_form_row {
+	padding: 5px;
+	background: #EEEBE1;
+	margin-bottom: 17px;
+	overflow: hidden;
+}
+
+/* Controls alignment and display of image in welcome message */
+.e2ma_signup_image_container {
+    text-align:center;
+    display: inline;
+}
+
+/* Controls border around signup image (when image is linked) */
+.e2ma_signup_image {
+    border:0;
+}
+
+/* Controls style and formatting of welcome message */
+.e2ma_signup_message {
+}
+
+/* Controls style and formatting of form field labels (first name, last name, etc.) */
+.e2ma_signup_form_label {
+	float:left;
+	text-align:left;
+	font-size: 14px;
+	line-height: 24px;
+	width: 100px;
+}
+
+/* Controls spacing and style for any text used to list options under multiple choice fields) */
+.e2ma_signup_form_element {
+	float: right;
+}
+
+/* For signup screens that are set to allow people to select which audience groups they'd like to join: Controls style for "Select your interests..." text */
+.e2ma_signup_form_group_label {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/* For signup screens that are set to allow people to select which audience groups they'd like to join: Controls style and spacing for groups displayed as options */
+.e2ma_signup_form_groups {
+	padding: 5px;
+	background: #EEEBE1;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.e2ma_signup_form_group_list {
+	font-size: 14px;
+	line-height: 24px;
+}
+/* Controls the style and spacing of the word "required" and border surrounding that text */
+.e2ma_signup_form_required_footnote {
+	font-size: 12px;
+	line-height: 17px;
+	margin-bottom: 10px;
+}
+
+/* Controls the color of the asterisk that indicates a field is required */
+.e2ma_signup_form_required_asterix {
+	color:#FF0000;
+	float: right;
+}
+
+.e2ma_signup_form_required_footnote .e2ma_signup_form_required_asterix {
+	float: none;
+}
+
+/* Controls the alignment of "submit" and "clear" buttons */
+.e2ma_signup_form_button_row {
+	float:left;
+}
+
+/* Controls display of the "clear" button */
+.e2ma_signup_form_button_row #e2ma_signup_reset_button {
+	display: none;
+}
+
+/*Overrides browser default settings for button styles (for additional control of "submit" and "clear" buttons) */
+.e2ma_signup_form_button { 
+
+}
+
+
+
+/* !SCROLLER  */
+/*-----------------------------------------------------------------------------------*/
+.scroller {
+	overflow: hidden;
+	height: 160px;
+	border-bottom: 2px solid #E27381;
+	width: 706px;
+}
+.scroller .slide {
+	overflow: hidden;
+	float: left;
+	width: 728px;
+	position: absolute;
+	bottom: 10px !important;
+	top: auto !important;
+}
+.scroller .row.slide {
+	margin: 0;
+	padding: 0;
+}
+.scroller .slide table {
+	width: 100%;
+}
+.scroller .slide td {
+	text-align: center;
+}
+.scroller .slide img {
+	/* height: 142px; */
+}
+.scroller .slide td.cell1 img,
+.scroller .slide td.cell2 img { float: left; }
+.scroller .slide td.cell3 img { margin: 0 auto }
+.scroller .slide td.cell4 img,
+.scroller .slide td.cell5 img { float: right; }
+
+.scroller_nav {
+	overflow: hidden;
+	padding: 5px 0;
+}
+.scroller_nav a {
+	display: block;
+	width: 18px;
+	height: 15px;
+	overflow: hidden;
+	text-indent: -2000px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.scroller_nav a.prev {
+	background-image: url(images/arrow-left.png);
+	float: left;
+}
+.scroller_nav a.next {
+	background-image: url(images/arrow-right.png);
+	float: right;
+}
+.scroller_nav a:hover {
+	background-position: 0 -15px;
+}
+
+/* !CATEGORY LISTS  */
+/*-----------------------------------------------------------------------------------*/
+.categories h1 {
+	color: #E27381;
+}
+li.menu-item-object-roto_book_cat,
+li.book_cat {
+	overflow: hidden;
+	background: #EEEBE1;
+	height: 91px;
+	margin-bottom: 18px;
+	padding: 0;
+}
+.cat_image {
+	display: block;
+	overflow: hidden;
+}
+.cat_image img {
+	display: block;
+    float: left;
+    width: 125px;
+}
+.cat_summary {
+	float: right;
+    padding: 12px;
+    width: 330px;
+}
+.cat_summary h2 {
+	font-size: 14px;
+}
+
+/* !GALLERY  */
+/*-----------------------------------------------------------------------------------*/
+.gallery {
+	overflow: hidden;
+}
+.gallery .row {
+	padding-bottom: 12px;
+	border-bottom: 2px solid #E27381;
+	margin-bottom: 8px;
+}
+.gallery .row a {
+	display: table-cell;
+	vertical-align: bottom;
+	width: 122px;
+}
+.gallery .row a.last {
+	width: 100px;
+}
+.gallery .row a img {
+	display: block;
+	width: 100px;
+}
+
+.gallery.scroller .row {
+	border-bottom: none;
+}
+.gallery.scroller .row a {
+	min-height: 143px;
+}
+
+/* !BOOK DETAILS PAGE  */
+/*-----------------------------------------------------------------------------------*/
+#book_single h1 {
+	font-size: 14px;
+}
+#book_single h1 a {
+	font-size: 10px;
+}
+#book_details {
+	margin-bottom: 18px;
+}
+#book_single .sidebar {
+	float: left;
+	width: 210px;
+}
+#main_image {
+	width: 209px;
+	margin-bottom: 16px;
+}
+#main_image img {
+	width: 100%;
+}
+
+ul.purchase li,
+#book_specs ul li {
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+ul.purchase li {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 25px;
+	overflow: hidden;
+	margin-bottom: 3px;
+}
+ul.purchase li a {
+	padding-left: 4px
+}
+ul.purchase li a span.icon {
+	display: block;
+	overflow: hidden;
+	background: url(images/btn_purchase.png) 0 0 no-repeat;
+	width: 30px;
+	height: 25px;
+	float: left;
+}
+ul.purchase li a:hover span.icon {
+	background-position: 0 -25px;
+}
+
+#book_specs ul li {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #E27381;
+	line-height: 16px;
+}
+
+#book_info {
+	width: 450px;
+	float: right;
+}
+
+.cover_gallery {
+	overflow: hidden;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+.cover_gallery.links {
+	border: none;
+	margin-bottom: 18px;
+}
+.cover_gallery .row {
+	padding-bottom: 0;
+	border-bottom: 2px solid #E27381;
+	margin-bottom: 32px;
+}
+.cover_gallery.related .row {
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+
+.cover_gallery a {
+	display: table-cell;
+	vertical-align: bottom;
+	width: 193px;
+}
+.cover_gallery.links a {
+	vertical-align: top;
+}
+.cover_gallery a.last {
+	width: 128px;
+}
+.cover_gallery a img {
+	display: block;
+	width: 128px;
+}
+.cg_title {
+	margin-top: 12px;
+    position: absolute;
+    width: 128px;
+}
+div.noflash {
+	background: #DEDEDE;
+	padding: 57px 50px;
+}
+div.noflash p {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	color: #E27381;
+	line-height: 21px;	
+}
+/* !BLOG  */
+/*-----------------------------------------------------------------------------------*/
+
+#blog {
+	padding-right: 23px;
+}
+#blog #mainContent {
+	border-right: 2px solid #DCB4B3;
+	padding-right: 15px;
+}
+#blog .sidebar {
+	width: 235px;
+}
+#blog .socnet {
+	margin-right: 45px;
+}
+hr.content_top {
+	width: 703px;
+}
+/* Sidebar Widgets */
+.widget {
+	margin-bottom: 40px;
+}
+
+.widget h3 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+/* Ribbons */
+#text-2.widget_text h3,
+#linkcat-2.widget_links h3 { /* ribbon text replacement */
+	position: absolute;
+	width: 284px;
+	height: 72px;
+	text-indent: -2000px;
+	overflow: hidden;
+	display: block;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	right: 7px;
+	margin-top: -80px;
+}
+#text-2.widget_text h3 { background-image: url(images/ribbon_welcome.png); } /* 'Welcome' ribbon */ 
+#linkcat-2.widget_links h3 { background-image: url(images/ribbon_links.png); } /* 'We love' ribbon */
+#text-2.widget_text, #linkcat-2.widget_links { padding-top: 80px; } /* to prevent ribbon overlap */
+
+.widget_text {
+	padding-right: 5px;
+}
+
+.widget p,
+.widget li {
+	font-size: 13px;
+	line-height: 16px;
+}
+.widget li {
+	background: none;
+	padding: 0;
+}
+
+/* Twitter */
+
+ul.really_simple_twitter_widget {
+	list-style: none;
+}
+ul.really_simple_twitter_widget li {
+	font-size: 13px;
+	background: none;
+	margin: 0 10px 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px dotted #CCC;
+}
+ul.really_simple_twitter_widget li .twitter-timestamp {
+	display: block;
+}
+#twitter_profile {
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+#twitter_time_line {
+	height: 370px;
+	overflow: auto !important;
+}
+.twitter_img_box {
+	margin-left: 0 !important;
+}
+.twitter_name_box a {
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+	top: 10px;
+}
+.twitter_description {
+	border: 0 !important;
+	padding: 0 !important;
+}
+
+/* Archives */
+.FlexoArchives_widget_archives ul {
+	margin: 0;
+}
+.FlexoArchives_widget_archives ul li {
+	padding-left: 20px;
+	background: url(images/bullet_large.png) 0 3px no-repeat;
+}
+.FlexoArchives_widget_archives ul li ul li {
+	font-size: 12px;
+	line-height: 14px;
+	padding-left: 14px;
+	background: url(images/bullet.png) 0 4px no-repeat;
+}
+.FlexoArchives_widget_archives h3,
+.FlexoArchives_widget_archives ul li a {
+	color: #6C2225;
+}
+
+/* Links */
+.widget_links li a {
+	color: #6C2225;
+}
+
+/* Search */
+.widget_search {
+	background: #EEEBE1;
+	padding: 5px;
+}
+.widget_search form {
+	padding: 0;
+}
+/* Posts */
+
+.post {
+	margin-bottom: 36px;
+}
+.post-date {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #DD4353;
+	margin-bottom: 3px;
+}
+h2.entry-title {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #6C2225;
+	margin-bottom: 18px;
+}
+h2.entry-title a {
+	color: inherit;
+}
+.entry-content,
+.entry-content p,
+.entry-content li {
+	font-size: 13px;
+	color: #000;
+	line-height: 18px;
+}
+.entry-content a {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.entry-meta {
+	border: 2px solid #DCB4B3;
+	border-width: 2px 0;
+	padding: 6px 0;
+	margin-top: 18px;
+	clear: both;
+}
+.entry-meta p {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #E27381;
+	line-height: 21px;
+	margin: 0;
+}
+.entry-meta a {
+	color: inherit;
+}
+.entry-meta a:hover {
+	color: #DD4353;
+}
+
+/* Comments */
+
+.comments-link a {
+	padding-left: 28px;
+	background-image: url(images/blog_icon_comment.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	height: 21px;
+}
+.comments-link a:hover {
+	background-position: 0 -21px;
+}
+#blog #comments {
+	clear: both;
+}
+#blog #comments h3 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#blog ol.commentlist {
+	list-style: none outside;
+}
+#blog ol.commentlist img.avatar {
+	float: left;
+	margin: 0 5px 5px 0;
+}
+#blog ol.commentlist p.commentMeta {
+	margin-bottom: 5px;
+}
+#blog ol.commentlist li {
+	padding: 0 0 18px 0;
+	background: none;
+	border-bottom: 1px dotted #DCB4B3;
+}
+#blog ol.commentlist li:last-child {
+	border-bottom: none;
+}
+#blog ol.commentlist li ul.children {
+	margin-left: 40px;
+}
+#blog ol.commentlist li ul.children li {
+	padding: 9px 0;
+	border-top: 1px dotted #DCB4B3;
+}
+#blog ol.commentlist li p {
+
+}
+#blog ol.commentlist .reply {
+	text-align: right;
+	padding-bottom: 9px;
+}
+#blog ol.commentlist li.comment.depth-1 {
+	border-bottom: 1px solid #DCB4B3;
+	margin: 18px 0;
+}
+#blog #commentform {
+	background: #EEEBE1;
+	padding: 10px;
+}
+#blog #commentform p {
+	font-size: 12px;
+}
+#blog #commentform fieldset {
+	margin: 20px 0;
+}
+#blog #commentform label {
+	font-size: 12px;
+}
+
+#blog #commentform fieldset input.textfield,
+#blog #commentform fieldset textarea {
+    width: 442px;
+    margin-bottom: 10px;
+}
+
+/* POST GALLERIES */
+#blog .gallery { 
+	margin: 0 auto 18px;
+}
+#blog .gallery .gallery-item {
+	float: left;
+    margin: 0 0 5px 0;
+    text-align: center;
+    width: 33%;
+}
+
+#blog .gallery-columns-2 .gallery-item { width: 50%; }
+#blog .gallery-columns-4 .gallery-item { width: 25%; }
+
+#blog .gallery img {
+	background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 4px #999999;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+#blog .gallery-columns-2 .attachment-medium {
+	max-width: 92%;
+	height: auto;
+}
+#blog .gallery-columns-4 .attachment-thumbnail {
+	max-width: 84%;
+	height: auto;
+}
+#blog .gallery .gallery-caption {
+	color: #888888;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+#blog .gallery dl, .gallery dt { margin: 0; }
+#blog .gallery br+br { display: none; }
+
+/*
+#blog img.size-thumbnail {
+	background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 4px #999999;
+    padding: 4px;
+}
+#blog .wp-caption:last-child {
+	margin-right: 0;
+}
+*/
+#blog .wp-caption {
+/*
+	background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0 0 4px #999999;
+    padding: 4px;	
+*/
+}
+
+/* Pagination */
+.pagination {
+	clear:both;
+	padding:20px 0;
+	position:relative;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 14px;
+	margin: 0 auto;
+}
+
+.pagination span, .pagination a {
+	display:block;
+	float:left;
+	margin: 2px 2px 2px 0;
+	padding: 4px 7px 4px;
+	text-decoration:none;
+	width:auto;
+	color:#fff;
+	background: #E27381;
+	border: 1px solid #E27381;
+}
+
+.pagination a.inactive {
+	background: none;
+	color: #E27381;
+}
+.pagination a:hover{
+	color:#fff;
+	background: #DD4353;
+	border-color: #DD4353;
+}
+.pagination a.inactive:hover{
+	color:#fff;
+	background: #E27381;
+}
+
+.pagination .current{
+	background: #B9292F;
+	color:#fff;
+	border-color: #B9292F;
+}
+
+
+/* !SIDEBAR  */
+/*-----------------------------------------------------------------------------------*/
+
+.sidebar {
+	float: right;
+	width: 188px;
+}
+.sidebar h2 {
+	color: #E27381;
+	font-size: 17px;
+	line-height: 18px;
+	margin-bottom: 18px;
+}
+/* !FORMS  */
+/*-----------------------------------------------------------------------------------*/
+
+form li {
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+input.textfield,
+textarea {
+	border: none;
+	background: #FFF;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #6C2225;
+	font-size: 12px;
+	padding: 3px;
+}
+form#book_search {
+	letter-spacing: 0.1em;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #6C2225;
+}
+form#book_search fieldset {
+	background: #EEEBE1;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+form#book_search ul {
+	list-style: none;
+	margin-top: 5px;
+}
+form#book_search ul li {
+	line-height: 18px;
+}
+form#book_search input#s {
+	width: 172px;
+}
+
+/* !BUTTONS  */
+/*-----------------------------------------------------------------------------------*/
+
+.button_rights {
+	width: 148px;
+	height: 38px;
+	text-align: center;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0 8px 6px 12px;
+	background: url(images/button_rights.png) 0 0 no-repeat;
+	position: relative;
+	left: -4px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.button_rights:hover {
+	background-position: 0 -44px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+.button_search {
+	border: none;
+	width: 191px;
+	height: 29px;
+	text-align: center;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0 3px 6px 6px;
+	background: url(images/button_search.png) 0 0 no-repeat;
+	position: relative;
+	left: -3px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.button_search:hover {
+	background-position: 0 -29px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+#e2ma_signup_submit_button {
+	border: none;
+	width: 349px;
+	height: 40px;
+	text-align: center;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0 8px 6px 12px;
+	background: url(images/button_newsletter.png) 0 0 no-repeat;
+	position: relative;
+	left: -4px;
+	display: table-cell;
+	vertical-align: middle;
+}
+#e2ma_signup_submit_button:hover {
+	background-position: 0 -40px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+.button_book_sidebar {
+	border: none;
+	width: 210px;
+	height: 35px;
+	text-align: center;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0 3px 6px 6px;
+	background: url(images/button_book_sidebar.png) 0 0 no-repeat;
+	position: relative;
+	left: -3px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.button_book_sidebar:hover {
+	background-position: 0 -41px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+.button_issuu {
+	width: 329px;
+	height: 34px;
+	text-align: center;
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 16px;
+    padding: 0 8px 6px 12px;
+	background: url(images/button_issuu.png) 0 0 no-repeat;
+	position: relative;
+	left: -4px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.button_issuu:hover {
+	background-position: 0 -40px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/* !FOOTER */
+/*-----------------------------------------------------------------------------------*/
+#footer {
+	background: transparent url(images/content_bg_bottom.png) 0 0 no-repeat;
+	padding: 50px 65px 20px;
+	overflow: hidden;
+}
+#footer #footer_text {
+	float: left;
+}
+#footer p,
+#footer p a {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #E27381;
+	font-size: 12px;
+	line-height: 30px;
+}
+#footer a:hover {
+	color: #B9292F;
+	text-decoration: none;
+}
+.socnet {
+	float: right;
+	margin-bottom: 6px;
+}
+.socnet p,
+.socnet p a {
+	font-family: "Century Gothic W01", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #E27381;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.socnet p span.findus {
+	float: left;
+	margin-right: 4px;
+}
+.socnet .icon {
+	display: block;
+	width: 25px;
+	height: 30px;
+	text-indent: -2000px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 8px;
+}
+.socnet .icon.twitter { background-image: url(images/icon_twitter.png) }
+.socnet .icon.facebook { background-image: url(images/icon_facebook.png) }
+.socnet .icon.pinterest { background-image: url(images/icon_pinterest.png) }
+
+.socnet .icon:hover { background-position: 0 -30px }
+
+
+/* TEXT FORMATTING
+------------------------------------------------ */
+.alignright {float:right; margin:0 0 5px 5px}
+.alignleft {float:left; margin:0 4px 5px 0}
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/*! fancyBox v2.0.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+.fancybox-tmp iframe, .fancybox-tmp object {
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+}
+
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1002;
+}
+
+.fancybox-outer {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background: #f9f9f9;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+			border-radius: 4px;
+}
+
+.fancybox-opened {
+	z-index: 1003;	
+}
+
+.fancybox-opened .fancybox-outer {
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-inner {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	outline: none;
+	overflow: hidden;
+	background: #000;
+}
+
+.fancybox-error {
+	color: #444;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+.fancybox-image, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background-image: url('images/fancybox/fancybox_sprite.png');
+}
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 1010;
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url('images/fancybox/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 1004;
+}
+
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	background: transparent url('images/blank.gif'); /* helps IE */
+	z-index: 1003;
+}
+
+.fancybox-prev {
+	left: 0;	
+}
+
+.fancybox-next {
+	right: 0;
+}
+
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 36px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 1003;
+	visibility: hidden;
+}
+
+.fancybox-prev span {
+	left: 20px;
+	background-position: 0 -36px;
+}
+
+.fancybox-next span {
+	right: 20px;
+	background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+	visibility: visible;
+}
+
+.fancybox-tmp {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	padding: 0;
+	overflow: visible;
+	visibility: hidden;
+}
+
+/* Overlay helper */
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 1001;
+	background: #000;
+}
+
+/* Title helper */
+
+.fancybox-title {
+	visibility: hidden;	
+	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	text-shadow: none;
+	z-index: 1005;
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 1003;
+	text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	margin-right: -100%;
+	padding: 2px 20px;
+	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+			border-radius: 15px;
+	text-shadow: 0 1px 2px #222;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 24px;
+	white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+	margin-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;	
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+
+img#wpstats{visibility:hidden; height:0px;} 
+
+/* OTHER DEVICES
+-----------------------------------------------------------------------------------*/
+
+@media all and (max-device-width: 1024px) {
+    /* styles for narrow desktop browsers and iPad landscape */
+
+
+	li {
+		background-image: url(images/bullet@2x.png);
+		background-size: 8px 6px;
+	}
+	#header {
+		background-image: url(images/content_bg_top@2x.png);
+		background-size: 836px 43px;
+	}
+	#site_logo a {
+		background-image: url(images/rotovision_books@2x.png);
+		background-size: 418px 79px;
+	}
+	.blog #site_logo a {
+		background-image: url(images/rotovision_blog@2x.png);
+		background-size: 418px 79px;
+	}
+	ul.mainNav li.menu-item-books a 		{ background-image: url(images/mainnav_books@2x.png);		background-size: 44px 536px;}
+	ul.mainNav li.menu-item-rights a 		{ background-image: url(images/mainnav_rights@2x.png); 		background-size: 40px 536px;}
+	ul.mainNav li.menu-item-catalogue a 	{ background-image: url(images/mainnav_catalogue@2x.png); 	background-size: 47px 536px;}
+	ul.mainNav li.menu-item-about-us a 		{ background-image: url(images/mainnav_about@2x.png); 		background-size: 35px 536px;}
+	ul.mainNav li.menu-item-contact-us a 	{ background-image: url(images/mainnav_contact@2x.png); 	background-size: 42px 536px;}
+	ul.mainNav li.menu-item-blog a 			{ background-image: url(images/mainnav_blog@2x.png); 		background-size: 35px 536px;}
+	
+	#content {
+		background-image: url(images/content_bg_tile@2x.png);
+		background-size: 836px 1px;
+	}
+	#anchors {
+		background-image: url(images/arrow-down@2x.png);
+		background-size: 15px 54px;
+	}
+	.ribbon.bloglink {
+		background-image: url(images/ribbon_blog@2x.png);
+		background-size: 213px 72px;
+	}
+	.scroller_nav a.prev {
+		background-image: url(images/arrow-left@2x.png);
+		background-size: 18px 30px;
+	}
+	.scroller_nav a.next {
+		background-image: url(images/arrow-right@2x.png);
+		background-size: 18px 30px;
+	}
+	ul.purchase li a span.icon {
+		background-image: url(images/btn_purchase@2x.png);
+		background-size: 30px 50px;
+	}
+	#text-2.widget_text h3 { 
+		background-image: url(images/ribbon_welcome@2x.png); /* 'Welcome' ribbon */ 
+		background-size: 284px 72px;
+	} 
+	#linkcat-2.widget_links h3 { 
+		background-image: url(images/ribbon_links@2x.png);/* 'We love' ribbon */
+		background-size: 284px 72px;
+	} 
+	.FlexoArchives_widget_archives ul li {
+		background-image: url(images/bullet_large@2x.png);
+		background-size: 15px 13px;;
+	}
+	.FlexoArchives_widget_archives ul li ul li {
+		background-image: url(images/bullet@2x.png);
+		background-size: 8px 6px;
+	}
+	.comments-link a {
+		background-image: url(images/blog_icon_comment@2x.png);
+		background-size: 25px 42px;
+	}
+	.button_rights {
+		background-image: url(images/button_rights@2x.png);
+		background-size: 168px 88px;
+	}
+	.button_search {
+		background-image: url(images/button_search@2x.png);
+		background-size: 191px 58px;
+	}
+	#e2ma_signup_submit_button {
+		background-image: url(images/button_newsletter@2x.png);
+		background-size: 349px 80px;
+	}
+	.button_book_sidebar {
+		background-image: url(images/button_book_sidebar@2x.png);
+		background-size: 213px 82px;
+	}
+	.button_issuu {
+		background-image: url(images/button_issuu@2x.png);
+		background-size: 349px 80px;
+	}
+
+	#footer {
+		background-image: url(images/content_bg_bottom@2x.png);
+		background-size: 836px 40px;
+	}
+	.socnet .icon.twitter { background-image: url(images/icon_twitter@2x.png); background-size: 25px 60px; }
+	.socnet .icon.facebook { background-image: url(images/icon_facebook@2x.png); background-size: 25px 60px; }
+	.socnet .icon.pinterest { background-image: url(images/icon_pinterest@2x.png); background-size: 25px 60px; }
+
+
+
+}
+@media all and (max-device-width: 768px) {
+    /* styles for narrower desktop browsers and iPad portrait */
+    
+}
+
+@media all and (max-device-width: 480px) {
+    /* styles for iPhone/Android landscape (and really narrow browser windows) */
+}
+
+@media all and (max-device-width: 320px) {
+    /* styles for iPhone/Android portrait */
+    
+}
+
+@media all and (max-device-width: 240px) {
+    /* styles for smaller devices */
+}
+
